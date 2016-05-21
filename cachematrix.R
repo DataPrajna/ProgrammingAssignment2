@@ -2,7 +2,7 @@
 ## functions do
 
 ## Write a short comment describing this function
-
+##The function below gets the matrix as input
 makeCacheMatrix <- function(x = matrix()) {
 m <- NULL
   set <- function(y){
@@ -33,6 +33,7 @@ cacheSolve <- function(x, ...) {
     return(m)
   }
   data <- x$get()
+  ## Assumption is made that the matrix is square, therefore, no exception is made
   m <- solve(data,...)
   x$setinverse(m)
  

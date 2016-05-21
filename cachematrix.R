@@ -29,12 +29,12 @@ cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
         m <- x$getinverse()
   if(!is.null(m)){
-    message("getting cached data")
+    message("getting cached matrix data")
     return(m)
   }
   data <- x$get()
   ## Assumption is made that the matrix is square, therefore, no exception is made
   m <- solve(data,...)
   x$setinverse(m)
- 
+ m
 }
